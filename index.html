@@ -18,6 +18,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </head>
 <body>
     <header>
@@ -222,7 +223,7 @@
                 <div class="partners-grid">
                     <div class="partner-logo partner-pallex">
                         <a href="https://www.pallex.com" target="_blank" rel="noopener noreferrer">
-                            <img src="img/logo-grupo-carreras.webp" alt="Partner 1">
+                            <img src="img/logo_pallex.jpg" alt="Partner 1">
                         </a>
                     </div>
                     <div class="partner-logo partner-redpalet">
@@ -243,7 +244,7 @@
                     <!-- Logos duplicados para el efecto continuo -->
                     <div class="partner-logo partner-pallex">
                         <a href="https://www.pallex.com" target="_blank" rel="noopener noreferrer">
-                            <img src="img/logo-grupo-carreras.webp" alt="Partner 1">
+                            <img src="img/logosfm.png" alt="Partner 1">
                         </a>
                     </div>
                     <div class="partner-logo partner-redpalet">
@@ -286,18 +287,18 @@
                             <p>info@sfmlogistica.com<br>comercial@sfmlogistica.com</p>
                         </div>
                     </div>
-                    <form class="contact-form" id="contactForm">
+                    <form class="contact-form" id="contact-form">
                         <div class="form-group">
                             <label for="name">Nombre completo *</label>
-                            <input type="text" id="name" name="name" required>
+                            <input type="text" id="name" name="user_name" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Email *</label>
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" name="user_email" required>
                         </div>
                         <div class="form-group">
                             <label for="phone">Teléfono</label>
-                            <input type="tel" id="phone" name="phone">
+                            <input type="tel" id="phone" name="user_phone">
                         </div>
                         <div class="form-group">
                             <label for="message">Mensaje *</label>
@@ -368,5 +369,6 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="emailjs.js"></script>
 </body>
 </html>
