@@ -122,3 +122,37 @@ cookiePolicyLink.addEventListener('click', (e) => {
     // Aquí puedes añadir la lógica para mostrar la política de cookies
     console.log('Mostrar política de cookies');
 });
+
+// Manejo del modal de cotización
+const cotizaBtn = document.getElementById('cotizaBtn');
+const cotizaModal = document.getElementById('cotizaModal');
+const closeModal = document.querySelector('.close-modal');
+
+// Abrir modal
+cotizaBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    cotizaModal.classList.add('show');
+    document.body.style.overflow = 'hidden'; // Prevenir scroll
+});
+
+// Cerrar modal
+closeModal.addEventListener('click', function() {
+    cotizaModal.classList.remove('show');
+    document.body.style.overflow = ''; // Restaurar scroll
+});
+
+// Cerrar modal al hacer clic fuera
+cotizaModal.addEventListener('click', function(e) {
+    if (e.target === cotizaModal) {
+        cotizaModal.classList.remove('show');
+        document.body.style.overflow = '';
+    }
+});
+
+// Cerrar modal con la tecla ESC
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && cotizaModal.classList.contains('show')) {
+        cotizaModal.classList.remove('show');
+        document.body.style.overflow = '';
+    }
+});

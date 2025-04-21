@@ -32,7 +32,7 @@
                     <a href="#flota" class="nav-link" aria-label="Nuestra flota">FLOTA</a>
                     <a href="#cobertura" class="nav-link" aria-label="Área de cobertura">COBERTURA</a>
                     <a href="#contacto" class="nav-link" aria-label="Contacto">CONTACTO</a>
-                    <a href="#cotizar" class="cta-button" aria-label="Solicitar cotización">COTIZA AHORA</a>
+                    <a href="#" class="cta-button" id="cotizaBtn" aria-label="Solicitar cotización">COTIZA AHORA</a>
                 </div>
                 <div class="hamburger" aria-label="Menú de navegación">
                     <span></span>
@@ -252,11 +252,7 @@
                             <img src="img/logo_redpalet.jpg" alt="Partner 2">
                         </a>
                     </div>
-                    <div class="partner-logo partner-lolotyd">
-                        <a href="https://www.lolotyd.com" target="_blank" rel="noopener noreferrer">
-                            <img src="img/lolo_tyd.png" alt="Partner 3">
-                        </a>
-                    </div>
+                    
                     <div class="partner-logo partner-logisticacom">
                         <a href="https://www.logisticacom.com" target="_blank" rel="noopener noreferrer">
                             <img src="img/logisticacom_cover.jpg" alt="Partner 4">
@@ -284,7 +280,7 @@
                         <div class="info-card">
                             <i class="fas fa-envelope"></i>
                             <h3>Email</h3>
-                            <p>info@sfmlogistica.com<br>comercial@sfmlogistica.com</p>
+                            <p>sfm@sfmlogistica.com<br></p>
                         </div>
                     </div>
                     <form class="contact-form" id="contact-form">
@@ -364,6 +360,24 @@
             <div class="cookie-buttons">
                 <button id="acceptCookies" class="btn-accept">Aceptar</button>
                 <button id="rejectCookies" class="btn-reject">Rechazar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Cotización -->
+    <div class="cotiza-modal" id="cotizaModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>¿Cómo prefieres contactarnos?</h2>
+            <div class="contact-options">
+                <a href="mailto:jorge@sfmlogistica.es" class="contact-option email-option">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email</span>
+                </a>
+                <a href="https://wa.me/34621128229" target="_blank" class="contact-option whatsapp-option">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                </a>
             </div>
         </div>
     </div>

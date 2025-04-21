@@ -1265,3 +1265,122 @@ h1 {
         justify-content: center;
     }
 }
+
+/* Modal de Cotización */
+.cotiza-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.cotiza-modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.close-modal:hover {
+    color: #333;
+}
+
+.modal-content h2 {
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 24px;
+}
+
+.contact-options {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.contact-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    min-width: 150px;
+}
+
+.contact-option i {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.contact-option span {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.email-option {
+    background-color: #f8f9fa;
+}
+
+.email-option:hover {
+    background-color: #e9ecef;
+    transform: translateY(-5px);
+}
+
+.whatsapp-option {
+    background-color: #f8f9fa;
+}
+
+.whatsapp-option:hover {
+    background-color: #e9ecef;
+    transform: translateY(-5px);
+}
+
+.whatsapp-option i {
+    color: #25D366;
+}
+
+.email-option i {
+    color: #0066cc;
+}
+
+@media (max-width: 576px) {
+    .contact-options {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-option {
+        width: 100%;
+    }
+
+    .modal-content {
+        padding: 30px 20px;
+    }
+}
