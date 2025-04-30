@@ -1384,3 +1384,61 @@ h1 {
         padding: 30px 20px;
     }
 }
+
+/* Estilos para la página de Política de Privacidad */
+.privacy-policy {
+    max-width: 800px;
+    margin: 6rem auto 2rem;
+    padding: 0 1rem;
+}
+
+.privacy-policy h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.privacy-policy section {
+    margin-bottom: 2rem;
+}
+
+.privacy-policy h2 {
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+.privacy-policy p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.privacy-policy ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.privacy-policy li {
+    margin-bottom: 0.5rem;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #f0f0f0;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    margin: 1rem;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #e0e0e0;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    color: #666;
+    font-size: 0.9rem;
+}
