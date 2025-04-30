@@ -32,7 +32,7 @@
                     <a href="#flota" class="nav-link" aria-label="Nuestra flota">FLOTA</a>
                     <a href="#cobertura" class="nav-link" aria-label="Área de cobertura">COBERTURA</a>
                     <a href="#contacto" class="nav-link" aria-label="Contacto">CONTACTO</a>
-                    <a href="#" class="cta-button" id="cotizaBtn" aria-label="Solicitar cotización">COTIZA AHORA</a>
+                    <a href="#" class="cta-button" id="cotizaBtn" aria-label="Solicitar cotización" onclick="document.getElementById('cotizaModal').classList.add('show'); document.body.style.overflow = 'hidden';">COTIZA AHORA</a>
                 </div>
                 <div class="hamburger" aria-label="Menú de navegación">
                     <span></span>
@@ -367,7 +367,7 @@
     <!-- Modal de Cotización -->
     <div class="cotiza-modal" id="cotizaModal">
         <div class="modal-content">
-            <span class="close-modal">&times;</span>
+            <span class="close-modal" onclick="document.getElementById('cotizaModal').classList.remove('show'); document.body.style.overflow = '';">&times;</span>
             <h2>¿Cómo prefieres contactarnos?</h2>
             <div class="contact-options">
                 <a href="mailto:jorge@sfmlogistica.es" class="contact-option email-option">

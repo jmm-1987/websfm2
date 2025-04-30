@@ -124,35 +124,32 @@ cookiePolicyLink.addEventListener('click', (e) => {
 });
 
 // Manejo del modal de cotización
-const cotizaBtn = document.getElementById('cotizaBtn');
-const cotizaModal = document.getElementById('cotizaModal');
-const closeModal = document.querySelector('.close-modal');
+document.addEventListener('DOMContentLoaded', function() {
+    const cotizaModal = document.getElementById('cotizaModal');
 
-// Abrir modal
-cotizaBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    cotizaModal.classList.add('show');
-    document.body.style.overflow = 'hidden'; // Prevenir scroll
-});
+    if (cotizaModal) {
+        // Cerrar modal al hacer clic fuera
+        cotizaModal.addEventListener('click', function(e) {
+            if (e.target === cotizaModal) {
+                cotizaModal.classList.remove('show');
+                document.body.style.overflow = '';
+            }
+        });
 
-// Cerrar modal
-closeModal.addEventListener('click', function() {
-    cotizaModal.classList.remove('show');
-    document.body.style.overflow = ''; // Restaurar scroll
-});
+        // Cerrar modal con la tecla ESC
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && cotizaModal.classList.contains('show')) {
+                cotizaModal.classList.remove('show');
+                document.body.style.overflow = '';
+            }
+        });
 
-// Cerrar modal al hacer clic fuera
-cotizaModal.addEventListener('click', function(e) {
-    if (e.target === cotizaModal) {
-        cotizaModal.classList.remove('show');
-        document.body.style.overflow = '';
-    }
-});
-
-// Cerrar modal con la tecla ESC
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && cotizaModal.classList.contains('show')) {
-        cotizaModal.classList.remove('show');
-        document.body.style.overflow = '';
+        // Prevenir que el clic en los enlaces cierre el modal
+        const contactOptions = document.querySelectorAll('.contact-option');
+        contactOptions.forEach(option => {
+            option.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+        });
     }
 });
