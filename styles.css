@@ -676,7 +676,7 @@ h1 {
     gap: 80px;
     align-items: center;
     justify-content: flex-start;
-    animation: scrollPartners 30s linear infinite;
+    animation: scrollPartners 20s linear infinite;
     width: max-content;
 }
 
