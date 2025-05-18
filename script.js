@@ -1,12 +1,40 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Menú de navegación
+    const navbar = document.querySelector('.navbar');
     const hamburger = document.querySelector('.hamburger');
     const navItems = document.querySelector('.nav-items');
 
-    hamburger.addEventListener('click', () => {
-        navItems.classList.toggle('active');
-        hamburger.classList.toggle('active');
-    });
+    // Función para cambiar el estilo del menú al hacer scroll
+    function handleScroll() {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    }
 
+    // Añadir el evento de scroll
+    window.addEventListener('scroll', handleScroll);
+    // Ejecutar una vez al cargar para establecer el estado inicial
+    handleScroll();
+
+    // Toggle del menú hamburguesa
+    if (hamburger && navItems) {
+        hamburger.addEventListener('click', () => {
+            navItems.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        // Cerrar el menú al hacer click en un enlace
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navItems.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+    }
+
+    // Observer para las tarjetas de servicios
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -53,41 +81,6 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         // Add your cookie policy page URL here
         window.location.href = '/politica-cookies.html';
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Menú de navegación
-    const navbar = document.querySelector('.navbar');
-    const hamburger = document.querySelector('.hamburger');
-    const navItems = document.querySelector('.nav-items');
-
-    // Función para cambiar el estilo del menú al hacer scroll
-    function handleScroll() {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    }
-
-    // Añadir el evento de scroll
-    window.addEventListener('scroll', handleScroll);
-    // Ejecutar una vez al cargar para establecer el estado inicial
-    handleScroll();
-
-    // Toggle del menú hamburguesa
-    hamburger.addEventListener('click', function() {
-        navItems.classList.toggle('active');
-        hamburger.classList.toggle('active');
-    });
-
-    // Cerrar el menú al hacer click en un enlace
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-            navItems.classList.remove('active');
-            hamburger.classList.remove('active');
-        });
     });
 });
 

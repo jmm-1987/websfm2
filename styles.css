@@ -115,6 +115,8 @@ body {
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
 }
 
 .hamburger span {
@@ -122,7 +124,19 @@ body {
     width: 25px;
     height: 3px;
     background-color: #ffffff;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
 }
 
 .navbar.scrolled .hamburger span {
@@ -284,13 +298,15 @@ h1 {
     .nav-items {
         display: none;
         flex-direction: column;
-        position: absolute;
-        top: 70px;
+        position: fixed;
+        top: 0;
         left: 0;
         width: 100%;
-        background-color: white;
-        padding: 20px;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.98);
+        padding: 80px 20px 20px;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
     }
     
     .nav-items.active {
@@ -299,10 +315,25 @@ h1 {
     
     .hamburger {
         display: flex;
+        position: relative;
+        z-index: 1001;
     }
     
-    .cta-buttons {
-        flex-direction: column;
+    .nav-link {
+        color: #333;
+        font-size: 18px;
+        padding: 15px 0;
+        text-align: center;
+        text-shadow: none;
+    }
+    
+    .nav-link:hover {
+        color: #0066cc;
+    }
+    
+    .cta-button {
+        margin-top: 20px;
+        text-align: center;
     }
     
     h1 {
