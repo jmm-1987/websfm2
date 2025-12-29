@@ -19,6 +19,18 @@ body {
     padding: 0 50px;
 }
 
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 15px;
+    }
+}
+
 /* Navigation */
 .navbar {
     background-color: transparent;
@@ -338,19 +350,43 @@ h1 {
 
 /* Responsive styles */
 @media (max-width: 992px) {
+    .hero {
+        padding-top: 100px;
+        min-height: auto;
+    }
+    
     .hero-content {
         min-height: auto;
+        padding: 40px 0;
+    }
+    
+    .logo {
+        max-width: 600px;
+        margin-top: 0;
     }
     
     .logo-tagline {
         flex-direction: column;
         margin-top: 30px;
+        width: 100%;
     }
     
     .text-content {
         margin-left: 0;
+        margin-right: 0;
         text-align: center;
         margin-bottom: 30px;
+        max-width: 100%;
+    }
+    
+    h1 {
+        font-size: 36px;
+        text-align: center;
+    }
+    
+    .cta-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
     }
     
     .hero-image {
@@ -359,15 +395,39 @@ h1 {
         right: 0;
         transform: none;
         max-width: 60%;
-        margin-top: 30px;
-    }
-    
-    h1 {
-        font-size: 32px;
+        margin: 30px auto 0;
     }
 }
 
 @media (max-width: 768px) {
+    .hero {
+        padding-top: 80px;
+    }
+    
+    .hero-content {
+        padding: 30px 0;
+    }
+    
+    .logo {
+        max-width: 400px;
+    }
+    
+    h1 {
+        font-size: 28px;
+        line-height: 1.3;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+    
     .nav-items {
         display: none;
         flex-direction: column;
@@ -407,24 +467,36 @@ h1 {
     .cta-button {
         margin-top: 20px;
         text-align: center;
-    }
-    
-    h1 {
-        font-size: 32px;
+        width: 100%;
     }
 }
 
 @media (max-width: 576px) {
+    .hero {
+        padding-top: 70px;
+    }
+    
+    .logo {
+        max-width: 300px;
+    }
+    
     h1 {
-        font-size: 28px;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .cta-buttons {
+        gap: 12px;
     }
     
     .btn {
         width: 100%;
+        padding: 12px 20px;
+        font-size: 14px;
     }
     
     .hero-image {
-        max-width: 80%;
+        max-width: 90%;
     }
 }
 
@@ -598,9 +670,47 @@ h1 {
     }
 
     .services-grid {
-        grid-template-columns: repeat(5, 1fr);
-        gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
         padding: 0 10px;
+    }
+    
+    .service-card {
+        padding: 20px;
+    }
+    
+    .service-card h3 {
+        font-size: 20px;
+    }
+    
+    .service-card p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .services {
+        padding: 40px 0;
+    }
+    
+    .services h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 0 10px;
+    }
+    
+    .service-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .service-icon i {
+        font-size: 28px;
     }
 }
 
@@ -682,6 +792,12 @@ h1 {
 }
 
 /* Responsive adjustments for fleet */
+@media (max-width: 992px) {
+    .fleet {
+        padding: 80px 0;
+    }
+}
+
 @media (max-width: 768px) {
     .fleet {
         padding: 60px 0;
@@ -695,6 +811,22 @@ h1 {
     .fleet-grid {
         grid-template-columns: 1fr;
         gap: 20px;
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .fleet {
+        padding: 40px 0;
+    }
+    
+    .fleet h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+    
+    .fleet-info h3 {
+        font-size: 20px;
     }
 }
 
@@ -778,8 +910,13 @@ h1 {
 
 /* Responsive adjustments for about section */
 @media (max-width: 992px) {
+    .about {
+        padding: 80px 0;
+    }
+    
     .about-content {
         flex-direction: column;
+        gap: 30px;
     }
 
     .about-image {
@@ -790,6 +927,7 @@ h1 {
 
     .stats-grid {
         grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
     }
 }
 
@@ -800,15 +938,38 @@ h1 {
 
     .about h2 {
         font-size: 32px;
+        margin-bottom: 25px;
+    }
+    
+    .about-description {
+        font-size: 16px;
     }
 
     .stats-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 15px;
     }
 
     .stat-item {
         padding: 15px;
+    }
+    
+    .stat-number {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 576px) {
+    .about {
+        padding: 40px 0;
+    }
+    
+    .about h2 {
+        font-size: 28px;
+    }
+    
+    .about-description {
+        font-size: 15px;
     }
 }
 
@@ -949,26 +1110,35 @@ h1 {
 
 /* Responsive adjustments for partners */
 @media (max-width: 992px) {
+    .partners {
+        padding: 80px 0;
+    }
+    
+    .partners h2 {
+        font-size: 36px;
+        margin-bottom: 50px;
+    }
+    
     .partners-grid {
-        gap: 30px;
+        gap: 25px;
     }
     
     .partner-logo {
-        width: 250px;
-        height: 150px;
+        width: 220px;
+        height: 140px;
         padding: 15px;
     }
     
     .partner-pallex,
     .partner-redpalet,
     .partner-logisticacom {
-        width: 250px;
-        height: 150px;
+        width: 220px;
+        height: 140px;
     }
     
     .partner-lolotyd {
-        width: 250px;
-        height: 150px;
+        width: 220px;
+        height: 140px;
     }
     
     .partner-lolotyd img {
@@ -978,27 +1148,69 @@ h1 {
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
+    .partners {
+        padding: 60px 0;
+    }
+    
+    .partners h2 {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+    
     .partners-grid {
         gap: 20px;
     }
     
     .partner-logo {
-        width: 200px;
-        height: 120px;
+        width: 180px;
+        height: 110px;
         padding: 12px;
     }
     
     .partner-pallex,
     .partner-redpalet,
     .partner-logisticacom {
-        width: 200px;
-        height: 120px;
+        width: 180px;
+        height: 110px;
     }
     
     .partner-lolotyd {
-        width: 200px;
-        height: 120px;
+        width: 180px;
+        height: 110px;
+    }
+}
+
+@media (max-width: 576px) {
+    .partners {
+        padding: 40px 0;
+    }
+    
+    .partners h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+    
+    .partners-grid {
+        gap: 15px;
+    }
+    
+    .partner-logo {
+        width: 150px;
+        height: 90px;
+        padding: 10px;
+    }
+    
+    .partner-pallex,
+    .partner-redpalet,
+    .partner-logisticacom {
+        width: 150px;
+        height: 90px;
+    }
+    
+    .partner-lolotyd {
+        width: 150px;
+        height: 90px;
     }
     
     .partner-lolotyd img {
@@ -1038,6 +1250,30 @@ h1 {
     color: #333;
     margin: 0;
     z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .coverage {
+        padding: 60px 0 0 0;
+    }
+    
+    .coverage h2 {
+        font-size: 28px;
+        top: 15px;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .coverage {
+        padding: 40px 0 0 0;
+    }
+    
+    .coverage h2 {
+        font-size: 24px;
+        top: 10px;
+        padding: 0 15px;
+    }
 }
 
 /* Contact Section */
@@ -1165,22 +1401,32 @@ h1 {
 
 /* Responsive adjustments for contact */
 @media (max-width: 992px) {
+    .contact {
+        padding: 80px 0;
+    }
+    
     .contact-content {
         flex-direction: column;
+        gap: 30px;
     }
     
     .contact-info {
         flex-direction: row;
         flex-wrap: wrap;
+        width: 100%;
     }
     
     .info-card {
         flex: 1;
         min-width: 250px;
     }
+    
+    .contact-form {
+        width: 100%;
+    }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     .contact {
         padding: 60px 0;
     }
@@ -1190,11 +1436,31 @@ h1 {
         margin-bottom: 40px;
     }
     
+    .contact-info {
+        flex-direction: column;
+    }
+    
+    .info-card {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact {
+        padding: 40px 0;
+    }
+    
+    .contact h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+    
     .contact-form {
         padding: 20px;
     }
     
     .info-card {
+        padding: 20px;
         min-width: 100%;
     }
 }
