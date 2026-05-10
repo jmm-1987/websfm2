@@ -515,7 +515,7 @@ h1 {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     padding: 0 20px;
 }
@@ -581,6 +581,10 @@ h1 {
 
 .service-card:nth-child(5).animate {
     animation-delay: 1s;
+}
+
+.service-card:nth-child(6).animate {
+    animation-delay: 1.2s;
 }
 
 .service-card:hover {
@@ -1059,6 +1063,29 @@ h1 {
     opacity: 1;
 }
 
+.partner-slot {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.partner-placeholder {
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed rgba(0, 102, 204, 0.35);
+    border-radius: 12px;
+    color: #0066cc;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: rgba(0, 102, 204, 0.04);
+}
+
 /* Estilos específicos para cada logo */
 .partner-pallex {
     width: 300px;
@@ -1082,6 +1109,12 @@ h1 {
 }
 
 .partner-logisticacom {
+    width: 300px;
+    height: 180px;
+}
+
+.partner-primor,
+.partner-tedi {
     width: 300px;
     height: 180px;
 }
@@ -1131,7 +1164,9 @@ h1 {
     
     .partner-pallex,
     .partner-redpalet,
-    .partner-logisticacom {
+    .partner-logisticacom,
+    .partner-primor,
+    .partner-tedi {
         width: 220px;
         height: 140px;
     }
@@ -1145,6 +1180,10 @@ h1 {
         width: 100%;
         height: 100%;
         object-fit: contain;
+    }
+
+    .partner-placeholder {
+        font-size: 24px;
     }
 }
 
@@ -1170,7 +1209,9 @@ h1 {
     
     .partner-pallex,
     .partner-redpalet,
-    .partner-logisticacom {
+    .partner-logisticacom,
+    .partner-primor,
+    .partner-tedi {
         width: 180px;
         height: 110px;
     }
@@ -1178,6 +1219,10 @@ h1 {
     .partner-lolotyd {
         width: 180px;
         height: 110px;
+    }
+
+    .partner-placeholder {
+        font-size: 20px;
     }
 }
 
@@ -1203,7 +1248,9 @@ h1 {
     
     .partner-pallex,
     .partner-redpalet,
-    .partner-logisticacom {
+    .partner-logisticacom,
+    .partner-primor,
+    .partner-tedi {
         width: 150px;
         height: 90px;
     }
@@ -1217,6 +1264,10 @@ h1 {
         width: 100%;
         height: 100%;
         object-fit: contain;
+    }
+
+    .partner-placeholder {
+        font-size: 16px;
     }
 }
 
